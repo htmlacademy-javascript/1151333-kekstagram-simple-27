@@ -8,10 +8,10 @@ function getRandomNumber(min, max) {
 
 function checkMaxString(str, maxStr) {
   if (str.length > maxStr.length) {
-  return false;
-} else {
-  return true;
-}
+    return false;
+  } else {
+    return true;
+  }
 }
 
 getRandomNumber(4, 7);
