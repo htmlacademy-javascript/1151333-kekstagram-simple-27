@@ -7,6 +7,9 @@ function getRandomNumber(min, max) {
 }
 
 function checkMaxString(str, maxStr) {
-  let result = str.length > maxStr.length ? false : true;
+  const result = str.length > maxStr.length ? false : true;
   return result;
 }
+
+getRandomNumber(4, 7);
+checkMaxString('Hi', 'Hello');
