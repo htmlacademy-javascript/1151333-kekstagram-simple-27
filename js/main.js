@@ -7,8 +7,11 @@ function getRandomNumber(min, max) {
 }
 
 function checkMaxString(str, maxStr) {
-  const result = str.length > maxStr.length ? false : true;
-  return result;
+  if (str.length > maxStr.length) {
+  return false;
+} else {
+  return true;
+}
 }
 
 getRandomNumber(4, 7);
