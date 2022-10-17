@@ -18,32 +18,32 @@ function checkMaxString(str, maxStr) {
 checkMaxString('Hi', 'Hello');
 
 
-let photoDescription = ['Новое фото', 'Еще одно', 'Выходные', 'Без комментариев',
- 'Как-то так', 'Начало', 'День первый', 'День второй', 'Отлично!', 'Такое', 'Вот так',
-  'Интересно', 'Это правда', 'Оставлю здесь'
+const photoDescription = ['Новое фото', 'Еще одно', 'Выходные', 'Без комментариев',
+  'Как-то так', 'Начало', 'День первый', 'День второй', 'Отлично!', 'Такое', 'Вот так',
+   'Интересно', 'Это правда', 'Оставлю здесь'
 ];
 
-let likesCount = {
+const likesCount = {
   min: 15,
   max: 200
 };
 
-let commentsCount = {
+const commentsCount = {
   min: 0,
   max: 200
 };
 
 const OBJECT_COUNT = 25;
 
-let getRandomArrayElement = (elements) => elements
-[getRandomNumber(0, elements.length - 1)];
+const getRandomArrayElement = (elements) => elements[getRandomNumber(0, elements.length - 1)];
+
 
 function arrayShuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
 
 
-let createPhoto = (objectIndex) => ({
+const createPhoto = (objectIndex) => ({
   id: objectIndex,
   url: `photos/${objectIndex}.jpg`,
   description: getRandomArrayElement(photoDescription),
@@ -57,4 +57,4 @@ const similarObjects = Array.from({length: OBJECT_COUNT}, (_, objectIndex) => cr
 
 arrayShuffle(similarObjects);
 
-console.log(similarObjects);
+similarObjects();
