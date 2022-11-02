@@ -11,7 +11,6 @@ const onPopupEscKeydown = (evt) => {
   }
 };
 
-
 function openUserModal () {
   overlayModal.classList.remove('hidden');
   document.body.classList.add('modal-open');
