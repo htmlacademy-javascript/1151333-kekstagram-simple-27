@@ -1,8 +1,12 @@
 import {isEscapeKey, isEnterKey} from './util.js';
+import {resetEffect} from './slider-effects.js';
+
 
 const userUploadField = document.querySelector('#upload-file');
 const overlayModal = document.querySelector('.img-upload__overlay');
 const overlayModalCloseButton = document.querySelector('#upload-cancel');
+const form = document.querySelector('#upload-select-image');
+
 
 const onPopupEscKeydown = (evt) => {
   if (isEscapeKey(evt)) {
@@ -16,6 +20,7 @@ function openUserModal () {
   document.body.classList.add('modal-open');
 
   document.addEventListener('keydown', onPopupEscKeydown);
+
 }
 
 function closeUserModal() {
@@ -23,7 +28,8 @@ function closeUserModal() {
   document.body.classList.remove('modal-open');
 
   document.removeEventListener('keyDown', onPopupEscKeydown);
-  userUploadField.reset();
+  form.reset();
+  resetEffect();
 }
 
 userUploadField.addEventListener('change', () => {
