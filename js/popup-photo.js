@@ -1,5 +1,6 @@
 import {isEscapeKey, isEnterKey} from './util.js';
 import {resetEffect} from './slider-effects.js';
+import {scaleImage} from './image-scale.js';
 
 
 const userUploadField = document.querySelector('#upload-file');
@@ -30,6 +31,7 @@ function closeUserModal() {
   document.removeEventListener('keyDown', onPopupEscKeydown);
   form.reset();
   resetEffect();
+  scaleImage();
 }
 
 userUploadField.addEventListener('change', () => {

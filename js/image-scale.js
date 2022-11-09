@@ -8,6 +8,12 @@ const imgPreview = document.querySelector('.img-upload__preview');
 const minStep = 25;
 const maxStep = 100;
 const step = 25;
+const defaulValue = 100;
+
+const scaleImage = () => {
+  const value = defaulValue;
+  imgPreview.style.transform = (`scale(${value / 100})`);
+};
 
 
 const scaleReduce = function(element) {
@@ -47,4 +53,5 @@ imageScaleControl.addEventListener('click', (evt) => {
   }
 });
 
-export {imgPreview};
+
+export {imgPreview, scaleImage};
