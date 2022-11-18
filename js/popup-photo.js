@@ -19,9 +19,7 @@ const onPopupEscKeydown = (evt) => {
 function openUserModal () {
   overlayModal.classList.remove('hidden');
   document.body.classList.add('modal-open');
-
   document.addEventListener('keydown', onPopupEscKeydown);
-
 }
 
 function closeUserModal() {
@@ -47,3 +45,5 @@ userUploadField.addEventListener('keydown', (evt) => {
     openUserModal();
   }
 });
+
+export {openUserModal, closeUserModal, onPopupEscKeydown};

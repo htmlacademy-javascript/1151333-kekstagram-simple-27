@@ -1,6 +1,10 @@
-import './thumbnails.js';
-import './popup-photo.js';
-import './form.js';
-import './image-scale.js';
-import './image-effects.js';
-import './slider-effects.js';
+import {renderSimilarPhotos} from './thumbnails.js';
+import {closeUserModal} from './popup-photo.js';
+import {setUserFormSubmit} from './form.js';
+import {getData} from './api.js';
+
+getData((photos) => {
+  renderSimilarPhotos(photos);
+});
+
+setUserFormSubmit(closeUserModal);
