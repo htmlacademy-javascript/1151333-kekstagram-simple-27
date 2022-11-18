@@ -1,3 +1,8 @@
+const MIN_STEP = 25;
+const MAX_STEP = 100;
+const STEP = 25;
+const DEFAULT_VALUE = 100;
+
 const imageScaleControl = document.querySelector('.img-upload__scale');
 const buttonReduce = document.querySelector('.scale__control--smaller');
 const buttonIncrease = document.querySelector('.scale__control--bigger');
@@ -5,10 +10,6 @@ const buttonIncrease = document.querySelector('.scale__control--bigger');
 const scaleValue = document.querySelector('.scale__control--value');
 const imgPreview = document.querySelector('.img-upload__preview');
 
-const MIN_STEP = 25;
-const MAX_STEP = 100;
-const STEP = 25;
-const DEFAULT_VALUE = 100;
 
 const scaleImage = () => {
   const value = DEFAULT_VALUE;
