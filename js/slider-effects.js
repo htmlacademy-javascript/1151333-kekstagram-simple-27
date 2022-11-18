@@ -1,10 +1,6 @@
 import {imgPreview} from './image-scale.js';
 import {imageEffectsList} from './image-effects.js';
 
-const levelEffectValue = document.querySelector('.effect-level__value');
-const sliderElement = document.querySelector('.effect-level__slider');
-
-
 const EFFECTS = {
   none: {
     range: {
@@ -61,6 +57,9 @@ const EFFECTS = {
     units: '',
   },
 };
+
+const levelEffectValue = document.querySelector('.effect-level__value');
+const sliderElement = document.querySelector('.effect-level__slider');
 
 
 noUiSlider.create(sliderElement, {
