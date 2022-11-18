@@ -5,7 +5,7 @@ const levelEffectValue = document.querySelector('.effect-level__value');
 const sliderElement = document.querySelector('.effect-level__slider');
 
 
-const effects = {
+const EFFECTS = {
   none: {
     range: {
       min: 0,
@@ -90,14 +90,14 @@ sliderElement.noUiSlider.on('update', () => {
     sliderElement.removeAttribute('disabled');
     sliderElement.value = levelEffectValue.value;
 
-    const effect = effects[currentEffectName];
+    const effect = EFFECTS[currentEffectName];
     imgPreview.style.filter = `${effect.filter}(${currentValue}${effect.units})`;
   }
 });
 
 imageEffectsList.addEventListener('change', (evt) => {
   const value = evt.target.value;
-  const effect = effects[value];
+  const effect = EFFECTS[value];
 
   sliderElement.noUiSlider.updateOptions({
     range: effect.range,
