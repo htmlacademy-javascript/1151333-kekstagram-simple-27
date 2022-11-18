@@ -1,4 +1,4 @@
-import {showMistakeLoadData} from './error-message-popup.js';
+import {showErrorLoadData} from './error-message-popup.js';
 
 
 const getData = (onSuccess) => {
@@ -10,11 +10,11 @@ const getData = (onSuccess) => {
             onSuccess(photos);
           });
       } else {
-        showMistakeLoadData('Ошибка получения данных с сервера. Попробуйте еще');
+        showErrorLoadData('Ошибка получения данных с сервера. Попробуйте еще');
       }
     })
     .catch(() => {
-      showMistakeLoadData('Ошибка получения данных с сервера. Попробуйте еще');
+      showErrorLoadData('Ошибка получения данных с сервера. Попробуйте еще');
     });
 };
 

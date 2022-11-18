@@ -41,7 +41,7 @@ function closeErrorButton() {
 }
 
 
-const showMistakeLoadData = (message) => {
+const showErrorLoadData = (message) => {
   const mistakeElement = document.createElement('div');
   mistakeElement.style.zIndex = '100';
   mistakeElement.style.position = 'absolute';
@@ -62,4 +62,4 @@ const showMistakeLoadData = (message) => {
   }, MISTAKE_SHOW_TIME);
 };
 
-export {showErrorMessage, errorMessage, showMistakeLoadData};
+export {showErrorMessage, errorMessage, showErrorLoadData};
